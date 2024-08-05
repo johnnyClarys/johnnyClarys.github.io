@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+.character-header {
+    background: #e3d4c1;
+    border: 2px solid #6e4b3d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+
+}
+.titre {
+    text-align: center;
+    text-decoration: solid;
+}
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.header-fields {
+    display: flex;
+    flex: 3;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 20px;
+    width: 150px;
+}
+
+.header-field {
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.header-field label {
+    font-size: 0.8rem;
+    color: #6e4b3d;
+    margin-bottom: 5px;
+    width: 150px;
+}
+
+.header-field input {
+    border: 1px solid #6e4b3d;
+    border-radius: 4px;
+    padding: 5px;
+    background: #f9f9f9;
+    color: #333;
+    width: 250px;
+}
+
+.skills, .projects {
+    margin: 20px 0;
+}
+
+.skills {
+    float: left;
+    width: 30%;
+}
+
+.skill-card {
+    background: #fff;
+    border: 1px solid #6e4b3d;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.skill-level {
+    background: #6e4b3d;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.projects {
+    float: right;
+    width: 65%;
+    text-align: center;
+}
+
+.project {
+    background: #fff;
+    border: 1px solid #6e4b3d;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.project h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.project p {
+    margin: 5px 0;
+}
+
+.project a {
+    color: #6e4b3d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    clear: both;
+}
