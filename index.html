@@ -3,45 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Johnny Clarys - Développeur Web avec des compétences en HTML, CSS, JS, React, Bootstrap, et Sass.">
+    <meta name="keywords" content="Portfolio, Développeur Web, HTML, CSS, JavaScript, React, Bootstrap, Sass">
     <title>Portfolio - Feuille de Personnage</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
-<div class="titre"><h1>MON PORTFOLIO</h1></div>
 <body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+        </nav>
+        <div class="titre">
+            <h1>Mon Portfolio</h1>
+        </div>
+    </header>
+    
     <header class="character-header">
         <div class="header-container">
-          
             <div class="logo">
-                <img src="https://avatars.githubusercontent.com/u/158170498?s=400&u=f51ce48ed01ae5893e55f4724b4fd984385b0b7b&v=4" alt="profil picture">
+                <img src="https://avatars.githubusercontent.com/u/158170498?s=400&u=f51ce48ed01ae5893e55f4724b4fd984385b0b7b&v=4" alt="Photo de profil de Johnny Clarys">
             </div>
             <div class="header-fields">  
                 <div class="header-field">
                     <label for="character-name">Nom du Personnage</label>
-                    <input type="text" id="character-name" placeholder="Johnny Clarys">
+                    <input type="text" id="character-name" placeholder="Johnny Clarys" aria-label="Nom du personnage">
                 </div>
                 <div class="header-field">
                     <label for="class-level">Classe & Niveau</label>
-                    <input type="text" id="class-level" placeholder="Développeur Web Niveau 1">
+                    <input type="text" id="class-level" placeholder="Développeur Web Niveau 1" aria-label="Classe et niveau">
                 </div>
                 <div class="header-field">
                     <label for="background">Historique</label>
-                    <input type="text" id="background" placeholder="Passionné de l'informatique">
+                    <input type="text" id="background" placeholder="Passionné de l'informatique" aria-label="Historique">
                 </div>
                 <div class="header-field">
                     <label for="race">Race</label>
-                    <input type="text" id="race" placeholder="Humain">
+                    <input type="text" id="race" placeholder="Humain" aria-label="Race">
                 </div>
                 <div class="header-field">
                     <label for="alignment">Alignement</label>
-                    <input type="text" id="alignment" placeholder="loyal Bon">
+                    <input type="text" id="alignment" placeholder="Loyal Bon" aria-label="Alignement">
                 </div>
                 <div class="header-field">
                     <label for="experience">Points d'Expérience</label>
-                    <input type="text" id="experience" placeholder="Débutant /  00 XP">
+                    <input type="text" id="experience" placeholder="Débutant / 00 XP" aria-label="Points d'expérience">
                 </div>
             </div>
         </div>
     </header>
+
     <main>
         <section class="skills">
             <h2>Compétences</h2>
@@ -58,31 +73,35 @@
                 <h4>React <span class="skill-level">14</span></h4>
             </div>
             <div class="skill-card">
-                <h4>BootStrap <span class="skill-level">15</span></h4>
+                <h4>Bootstrap <span class="skill-level">15</span></h4>
             </div>
             <div class="skill-card">
                 <h4>Sass <span class="skill-level">12</span></h4>
             </div>
         </section>
+        
         <section class="projects">
-            <h2>Equipement / Projets</h2>
+            <h2>Équipement / Projets</h2>
             <div class="project">     
-                <p><a href="https://github.com/johnnyClarys/Johnny_Clarys_-Projet-2---Creez-la-page-d-accueil-agence-de-voyage-HTML-CSS" target="_blank"><p>P1 - Créer la page d'accueil d'une agence de voyage</p><p>Voir le projet sur GitHub</p>  </a></p>
+                <p><a href="https://github.com/johnnyClarys/Johnny_Clarys_-Projet-2---Creez-la-page-d-accueil-agence-de-voyage-HTML-CSS" target="_blank" rel="noopener noreferrer">P1 - Créer la page d'accueil d'une agence de voyage<br>Voir le projet sur GitHub</a></p>
             </div>
             <div class="project">             
-                <p><a href="https://github.com/johnnyClarys/Projet3_Apprenez_a_programmer_avec_JS" target="_blank"><p>P2 - Apprenez à programmer avec JavaScript</p>Voir le projet sur GitHub</a></p>
+                <p><a href="https://github.com/johnnyClarys/Projet3_Apprenez_a_programmer_avec_JS" target="_blank" rel="noopener noreferrer">P2 - Apprenez à programmer avec JavaScript<br>Voir le projet sur GitHub</a></p>
             </div>
             <div class="project"> 
-                <p><a href="https://github.com/johnnyClarys/projet-4---Debugger-et-optimiser-un-site-web" target="_blank"><p>P3 - Débugger et Optimiser un Site Web</p>Voir le projet sur GitHub</a></p>
+                <p><a href="https://github.com/johnnyClarys/projet-4---Debugger-et-optimiser-un-site-web" target="_blank" rel="noopener noreferrer">P3 - Débugger et Optimiser un Site Web<br>Voir le projet sur GitHub</a></p>
             </div>
             <div class="project">
-                <p><a href="https://github.com/johnnyClarys/projet-5--React" target="_blank"><p>P4 - React</p>Voir le projet sur GitHub</a></p>
+                <p><a href="https://github.com/johnnyClarys/projet-5--React" target="_blank" rel="noopener noreferrer">P4 - React<br>Voir le projet sur GitHub</a></p>
             </div>
             <div class="project">
-                <p><a href="https://github.com/johnnyClarys/projet6" target="_blank"><p>P5 - Mon Vieux Grimoire</p>Voir le projet sur GitHub</a></p>
+                <p><a href="https://github.com/johnnyClarys/projet6" target="_blank" rel="noopener noreferrer">P5 - Mon Vieux Grimoire<br>Voir le projet sur GitHub</a></p>
             </div>
         </section>
+        
+       
     </main>
+    
     <footer>
         <p>© Johnny Clarys 2024 - Mon Portfolio</p>
     </footer>
