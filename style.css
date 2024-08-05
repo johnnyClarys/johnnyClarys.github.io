@@ -146,3 +146,27 @@ footer {
     font-size: 0.9rem;
     clear: both;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+            align-items: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: flex-start;
+    }
+
+    .header-fields {
+        padding-left: 0;
+    }
+
+    .skills, .projects {
+        float: none;
+        width: 100%;
+    }
+
+    .project {
+        margin-bottom: 20px;
+    }
+}
