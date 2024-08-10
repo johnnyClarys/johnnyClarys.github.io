@@ -6,7 +6,9 @@
 
 body {
     font-family: 'Georgia', serif;
-    background: #f0f0f0;
+    background-image: url('fond.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #333;
     padding: 20px;
 }
@@ -18,6 +20,32 @@ body {
     border-radius: 5px;
     margin-bottom: 20px;
 }
+.skill-bar {
+    height: 10px;
+    background-color: #6e4b3d; 
+    width: 0; /* Initialement à 0, sera mis à jour par le JS */
+    transition: width 2s ease;
+}
+.project {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.project-description {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
+.project:hover .project-description {
+    display: block; /* Affiche la description lors du survol */
+}
+
 
 .navbar ul {
     list-style-type: none;
@@ -132,11 +160,11 @@ body {
     margin: 20px 0;
 }
 
-.skills {
-    float: left;
-    width: 30%;
-}
 
+.skills {
+    width: 300px;
+    float: left;
+}
 .skill-card {
     background: #fff;
     border: 1px solid #6e4b3d;
@@ -160,20 +188,23 @@ body {
     border-radius: 3px;
 }
 
-.projects {
-    float: right;
-    width: 65%;
-    text-align: center;
-}
+
 
 .project {
-    background: #fff;
+    background: #e3d4c1;
     border: 1px solid #6e4b3d;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+.projects-container {
+    border: 2px solid #000; /* Couleur et épaisseur de la bordure */
+    border-radius: 10px; /* Coins arrondis */
+    float: right;
+    width: 850px;
     text-align: center;
 }
 
