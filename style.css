@@ -77,20 +77,18 @@ body {
     margin-bottom: 20px;
 }
 
-.qui-suis-je {
+.qui-suis-je  {
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.qui-suis-je h2 {
+.qui-suis-je H2 {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #333;
     text-align: center;
+
 }
 
 .qui-suis-je p {
@@ -112,11 +110,43 @@ body {
     display: flex;
     align-items: center;
 }
-
+.containerAbout {
+    text-align: center;
+}
 .logo {
     flex: 1;
 }
+.passions {
+    margin: 15px;
+}
+.passions H2 {
+    margin: 15px;
+    padding: 15px;
+}
+.parcours-professionnel {
+    margin: 15px;
 
+}
+.parcours-professionnel H2 {
+    margin: 15px;
+    padding: 15px;
+}
+.loisirs { 
+    margin: 15px;
+
+}
+.loisirs H2 { 
+    margin: 15px;
+    padding: 15px;
+}
+.portfolio {
+    margin: 15px;
+
+}
+.portfolio H2{
+    margin: 15px;
+    padding: 15px;
+}
 .logo img {
     width: 200px;
     height: auto;
@@ -225,7 +255,9 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
+.social-links {
+text-align: center;
+}
 footer {
     text-align: center;
     margin-top: 20px;
