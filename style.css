@@ -340,3 +340,79 @@ footer {
         margin: 0 auto;
     }
 }
+.competences {
+    margin: 20px 0;
+}
+.competenceTitre {
+    text-align: center;
+}
+
+.competence {
+    background: #e3d4c1;
+    border: 2px solid #6e4b3d;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: auto;
+}
+
+.competence h2 {
+    font-family: 'Georgia', serif;
+    color: #6e4b3d;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #6e4b3d;
+    padding-bottom: 5px;
+}
+
+.competence ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.competence ul li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #6e4b3d;
+    border-radius: 5px;
+    text-shadow: 1px 1px #d4aa73;
+    font-family: 'Georgia', serif;
+}
+
+.competence p a {
+    color: #6e4b3d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.competence p a:hover {
+    text-decoration: underline;
+}
+
+.competence p {
+    margin-top: 15px;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+.competences-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between items */
+    margin: 20px 0;
+}
+
+.competence {
+    flex: 1 1 calc(50% - 20px); /* Two items per row with some spacing */
+    box-sizing: border-box; /* Ensure padding/border doesn't affect width */
+}
+
+/* Ensure that the competence cards stretch to fill the space equally */
+@media (max-width: 768px) {
+    .competence {
+        flex: 1 1 100%; /* Stack items in one column on smaller screens */
+    }
+}
