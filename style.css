@@ -1,418 +1,458 @@
+/* Réinitialisation des marges et des espacements, et définition de la taille de boîte pour tous les éléments */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Styles généraux pour le corps de la page */
 body {
-    font-family: 'Georgia', serif;
-    background-image: url('fond.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #333;
-    padding: 20px;
+    font-family: 'Georgia', serif; /* Police de caractères pour le texte */
+    background-image: url('fond.jpg'); /* Image de fond pour la page */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
+    background-size: cover; /* Recouvre toute la surface du corps avec l'image de fond */
+    color: #333; /* Couleur du texte */
+    padding: 20px; /* Espacement interne du corps */
 }
 
 /* Styles pour la barre de navigation */
 .navbar {
-    background: #6e4b3d;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    background: #6e4b3d; /* Couleur de fond de la barre de navigation */
+    color: #fff; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne de la barre de navigation */
+    border-radius: 5px; /* Coins arrondis */
+    margin-bottom: 20px; /* Marge inférieure */
 }
 
 .skill-bar {
-    height: 10px;
-    background-color: #6e4b3d; 
-    width: 0; /* Initialement à 0, sera mis à jour par le JS */
-    transition: width 2s ease;
+    height: 10px; /* Hauteur de la barre de compétence */
+    background-color: #6e4b3d; /* Couleur de fond de la barre de compétence */
+    width: 0; /* Largeur initiale à 0, mise à jour par JavaScript */
+    transition: width 2s ease; /* Transition fluide lors du changement de largeur */
 }
 
+/* Styles pour les projets */
 .project {
-    position: relative;
-    margin-bottom: 20px;
+    position: relative; /* Position relative pour le positionnement absolu des descriptions */
+    margin-bottom: 20px; /* Marge inférieure */
 }
 
 .project-description {
     display: none; /* Caché par défaut */
-    position: absolute;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: auto;
-    height: auto;
-    z-index: 1;
+    position: absolute; /* Positionnement absolu par rapport au parent */
+    background-color: #f9f9f9; /* Couleur de fond de la description */
+    border: 1px solid #ccc; /* Bordure de la description */
+    padding: 10px; /* Espacement interne */
+    width: auto; /* Largeur automatique */
+    height: auto; /* Hauteur automatique */
+    z-index: 1; /* Assure que la description se superpose aux autres éléments */
 }
 
 .project:hover .project-description {
     display: block; /* Affiche la description lors du survol */
 }
 
+/* Styles pour les éléments de la barre de navigation */
 .navbar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
+    list-style-type: none; /* Supprime les puces des listes */
+    display: flex; /* Affiche les éléments de la liste en ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
     gap: 15px; /* Espacement entre les éléments de la liste */
 }
 
 .navbar li {
-    display: inline;
+    display: inline; /* Affiche les éléments de la liste en ligne */
 }
 
 .navbar a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
+    color: #fff; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-size: 1rem; /* Taille de la police des liens */
+    font-weight: bold; /* Met le texte en gras */
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Souligne les liens au survol */
 }
 
-/* Styles pour la page À propos */
+/* Styles pour la section À propos */
 .titre {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: center; /* Centre le texte */
+    margin-bottom: 20px; /* Marge inférieure */
 }
 
-.qui-suis-je  {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+.qui-suis-je {
+    padding: 20px; /* Espacement interne */
+    max-width: 800px; /* Largeur maximale */
+    margin: 0 auto; /* Centre le bloc horizontalement */
 }
 
-.qui-suis-je H2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-    text-align: center;
-
+.qui-suis-je h2 {
+    font-size: 1.5em; /* Taille de la police des sous-titres */
+    margin-bottom: 10px; /* Marge inférieure */
+    color: #333; /* Couleur du texte */
+    text-align: center; /* Centre le texte */
 }
 
 .qui-suis-je p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #555;
+    font-size: 1em; /* Taille de la police des paragraphes */
+    line-height: 1.6; /* Hauteur de ligne pour le texte */
+    color: #555; /* Couleur du texte */
 }
 
+/* Styles pour l'en-tête du caractère */
 .character-header {
-    background: #e3d4c1;
-    border: 2px solid #6e4b3d;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #e3d4c1; /* Couleur de fond */
+    border: 2px solid #6e4b3d; /* Bordure */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    margin-bottom: 20px; /* Marge inférieure */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
 }
 
 .header-container {
-    display: flex;
-    align-items: center;
+    display: flex; /* Affiche les éléments en ligne */
+    align-items: center; /* Aligne les éléments verticalement */
 }
+
 .containerAbout {
-    text-align: center;
+    text-align: center; /* Centre le texte */
 }
+
 .logo {
-    flex: 1;
+    flex: 1; /* Permet à l'élément de s'étendre */
 }
+
 .passions {
-    margin: 15px;
+    margin: 15px; /* Marge */
 }
-.passions H2 {
-    margin: 15px;
-    padding: 15px;
+
+.passions h2 {
+    margin: 15px; /* Marge */
+    padding: 15px; /* Espacement interne */
 }
+
 .parcours-professionnel {
-    margin: 15px;
+    margin: 15px; /* Marge */
+}
 
+.parcours-professionnel h2 {
+    margin: 15px; /* Marge */
+    padding: 15px; /* Espacement interne */
 }
-.parcours-professionnel H2 {
-    margin: 15px;
-    padding: 15px;
-}
+
 .loisirs { 
-    margin: 15px;
+    margin: 15px; /* Marge */
+}
 
+.loisirs h2 { 
+    margin: 15px; /* Marge */
+    padding: 15px; /* Espacement interne */
 }
-.loisirs H2 { 
-    margin: 15px;
-    padding: 15px;
-}
+
 .portfolio {
-    margin: 15px;
+    margin: 15px; /* Marge */
+}
 
+.portfolio h2 {
+    margin: 15px; /* Marge */
+    padding: 15px; /* Espacement interne */
 }
-.portfolio H2{
-    margin: 15px;
-    padding: 15px;
-}
+
 .logo img {
-    width: 200px;
-    height: auto;
+    width: 200px; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
 }
 
 .header-fields {
-    display: flex;
-    flex: 3;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding-left: 20px;
-    width: 150px;
+    display: flex; /* Affiche les champs en ligne */
+    flex: 3; /* Permet à l'élément de s'étendre */
+    flex-wrap: wrap; /* Permet aux éléments de se déplacer à la ligne suivante */
+    gap: 10px; /* Espacement entre les champs */
+    padding-left: 20px; /* Espacement interne à gauche */
+    width: 150px; /* Largeur */
 }
 
 .header-field {
-    flex: 1 1 calc(33.333% - 20px);
-    display: flex;
-    flex-direction: column;
-    width: 150px;
+    flex: 1 1 calc(33.333% - 20px); /* Flexibilité des champs */
+    display: flex; /* Affiche les éléments en ligne */
+    flex-direction: column; /* Aligne les éléments verticalement */
+    width: 150px; /* Largeur */
 }
 
 .header-field label {
-    font-size: 0.8rem;
-    color: #6e4b3d;
-    margin-bottom: 5px;
-    width: 150px;
+    font-size: 0.8rem; /* Taille de la police des labels */
+    color: #6e4b3d; /* Couleur du texte */
+    margin-bottom: 5px; /* Marge inférieure */
+    width: 150px; /* Largeur */
 }
 
 .header-field input {
-    border: 1px solid #6e4b3d;
-    border-radius: 4px;
-    padding: 5px;
-    background: #f9f9f9;
-    color: #333;
-    width: 250px;
+    border: 1px solid #6e4b3d; /* Bordure */
+    border-radius: 4px; /* Coins arrondis */
+    padding: 5px; /* Espacement interne */
+    background: #f9f9f9; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    width: 250px; /* Largeur */
 }
 
+/* Styles pour les compétences et les projets */
 .skills, .projects {
-    margin: 20px 0;
+    margin: 20px 0; /* Marge */
 }
 
 .skills {
-    width: 300px;
-    float: left;
+    width: 300px; /* Largeur */
+    float: left; /* Aligne à gauche */
 }
 
 .skill-card {
-    background: #fff;
-    border: 1px solid #6e4b3d;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff; /* Couleur de fond */
+    border: 1px solid #6e4b3d; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 10px; /* Marge inférieure */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
 }
 
 .skill-card h4 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
+    display: flex; /* Affiche les éléments en ligne */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Aligne les éléments verticalement */
+    font-size: 1rem; /* Taille de la police */
 }
 
 .skill-level {
-    background: #6e4b3d;
-    color: #fff;
-    padding: 2px 5px;
-    border-radius: 3px;
+    background: #6e4b3d; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    padding: 2px 5px; /* Espacement interne */
+    border-radius: 3px; /* Coins arrondis */
 }
 
+/* Styles pour les projets */
 .project {
-    background: #e3d4c1;
-    border: 1px solid #6e4b3d;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
+    background: #e3d4c1; /* Couleur de fond */
+    border: 1px solid #6e4b3d; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Espacement interne */
+    margin-bottom: 20px; /* Marge inférieure */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour la transformation et l'ombre portée */
+    text-align: center; /* Centre le texte */
 }
 
 .projects-container {
     border: 2px solid #000; /* Couleur et épaisseur de la bordure */
     border-radius: 10px; /* Coins arrondis */
-    float: right;
-    width: 850px;
-    text-align: center;
+    float: right; /* Aligne à droite */
+    width: 850px; /* Largeur */
+    text-align: center; /* Centre le texte */
 }
 
 .project h4 {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    text-align: center;
+    font-size: 1.1rem; /* Taille de la police des titres */
+    margin-bottom: 5px; /* Marge inférieure */
+    text-align: center; /* Centre le texte */
 }
 
 .project p {
-    margin: 5px 0;
+    margin: 5px 0; /* Marges supérieure et inférieure */
 }
 
 .project a {
-    color: #6e4b3d;
-    text-decoration: none;
-    font-weight: bold;
+    color: #6e4b3d; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-weight: bold; /* Met le texte en gras */
 }
 
 .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.social-links {
-text-align: center;
-}
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    clear: both;
+    transform: translateY(-5px); /* Déplace le projet vers le haut au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre portée plus marquée */
 }
 
-/* Responsive Design */
+/* Styles pour les liens sociaux */
+.social-links {
+    text-align: center; /* Centre le texte */
+}
+
+/* Styles pour le pied de page */
+footer {
+    text-align: center; /* Centre le texte */
+    margin-top: 20px; /* Marge supérieure */
+    font-size: 0.9rem; /* Taille de la police */
+    clear: both; /* Nettoie les flottants */
+}
+
+/* Styles responsives pour les écrans de 768px et moins (tablettes et petits écrans) */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: column; /* Aligne les éléments en colonne */
+        align-items: center; /* Centre les éléments */
+        text-align: center; /* Centre le texte */
     }
 
     .logo {
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* Marge inférieure */
     }
 
     .header-fields {
-        width: 100%;
-        padding-left: 0;
+        width: 100%; /* Largeur à 100% */
+        padding-left: 0; /* Supprime l'espacement interne à gauche */
     }
 
     .header-field {
-        flex: 1 1 100%;
-        max-width: none;
-        margin-bottom: 10px;
+        flex: 1 1 100%; /* Les champs occupent toute la largeur */
+        max-width: none; /* Enlève la largeur maximale */
+        margin-bottom: 10px; /* Marge inférieure */
     }
 
     .header-field input {
-        width: 100%;
+        width: 100%; /* Largeur à 100% */
     }
 
     .skills {
-        width: 100%;
-        float: none;
+        width: 100%; /* Largeur à 100% */
+        float: none; /* Supprime le flottement */
     }
 
     .projects-container {
-        width: 100%;
-        border: none; /* Supprimer la bordure pour plus de flexibilité */
-        margin-top: 20px;
-        padding: 0 10px; /* Ajouter un peu de padding pour éviter que le contenu touche les bords */
-        box-sizing: border-box; /* Inclure le padding et les bordures dans la largeur totale */
+        width: 100%; /* Largeur à 100% */
+        border: none; /* Supprime la bordure */
+        margin-top: 20px; /* Marge supérieure */
+        padding: 0 10px; /* Espacement interne */
+        box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
     }
 
     .project {
-        width: 100%; /* Chaque projet prend toute la largeur disponible */
-        max-width: none; /* Enlève la largeur maximale pour plus de flexibilité */
+        width: 100%; /* Largeur à 100% */
+        max-width: none; /* Enlève la largeur maximale */
         box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Marge inférieure */
     }
 
     .project-description {
-        display: block; /* Toujours afficher la description dans les petits écrans */
-        position: relative;
-        width: 100%;
-        box-shadow: none; /* Enlever l'ombre pour simplifier le design */
+        display: block; /* Affiche toujours la description */
+        position: relative; /* Position relative pour un meilleur alignement */
+        width: 100%; /* Largeur à 100% */
+        box-shadow: none; /* Enlève l'ombre portée */
     }
 
     footer {
-        font-size: 0.8rem;
+        font-size: 0.8rem; /* Taille de la police réduite */
     }
 
     .social-icon {
-        font-size: 1.5em;
-        margin: 0 5px;
+        font-size: 1.5em; /* Taille des icônes sociales */
+        margin: 0 5px; /* Marges latérales */
     }
 }
 
+/* Styles responsives pour les écrans de 1200px et plus (grands écrans) */
 @media (min-width: 1200px) {
     .header-container {
-        max-width: 1200px;
-        margin: 0 auto;
+        max-width: 1200px; /* Largeur maximale */
+        margin: 0 auto; /* Centre horizontalement */
     }
 
     .projects-container {
-        max-width: 1200px;
-        margin: 0 auto;
+        max-width: 1200px; /* Largeur maximale */
+        margin: 0 auto; /* Centre horizontalement */
     }
 }
+
+/* Styles pour la section compétences */
 .competences {
-    margin: 20px 0;
+    margin: 20px 0; /* Marge */
 }
+
 .competenceTitre {
-    text-align: center;
+    text-align: center; /* Centre le texte */
 }
 
 .competence {
-    background: #e3d4c1;
-    border: 2px solid #6e4b3d;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 50px;
-    height: auto;
+    background: #e3d4c1; /* Couleur de fond */
+    border: 2px solid #6e4b3d; /* Bordure */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 15px; /* Espacement interne */
+    margin-bottom: 20px; /* Marge inférieure */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    width: 50px; /* Largeur */
+    height: auto; /* Hauteur automatique */
 }
 
 .competence h2 {
-    font-family: 'Georgia', serif;
-    color: #6e4b3d;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #6e4b3d;
-    padding-bottom: 5px;
+    font-family: 'Georgia', serif; /* Police de caractères */
+    color: #6e4b3d; /* Couleur du texte */
+    margin-bottom: 10px; /* Marge inférieure */
+    border-bottom: 2px solid #6e4b3d; /* Bordure inférieure */
+    padding-bottom: 5px; /* Espacement interne inférieur */
 }
 
 .competence ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: none; /* Supprime les puces des listes */
+    padding: 0; /* Supprime le padding */
+    margin: 0; /* Supprime la marge */
 }
 
 .competence ul li {
-    background: #fff;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #6e4b3d;
-    border-radius: 5px;
-    text-shadow: 1px 1px #d4aa73;
-    font-family: 'Georgia', serif;
+    background: #fff; /* Couleur de fond */
+    margin: 10px 0; /* Marges supérieure et inférieure */
+    padding: 10px; /* Espacement interne */
+    border: 1px solid #6e4b3d; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    text-shadow: 1px 1px #d4aa73; /* Ombre portée du texte */
+    font-family: 'Georgia', serif; /* Police de caractères */
 }
 
 .competence p a {
-    color: #6e4b3d;
-    text-decoration: none;
-    font-weight: bold;
+    color: #6e4b3d; /* Couleur du texte des liens */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-weight: bold; /* Met le texte en gras */
 }
 
 .competence p a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Souligne les liens au survol */
 }
 
 .competence p {
-    margin-top: 15px;
-    font-family: 'Georgia', serif;
-    color: #333;
+    margin-top: 15px; /* Marge supérieure */
+    font-family: 'Georgia', serif; /* Police de caractères */
+    color: #333; /* Couleur du texte */
 }
+
+/* Conteneur pour les compétences */
 .competences-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px; /* Space between items */
-    margin: 20px 0;
+    display: flex; /* Affiche les éléments en ligne */
+    flex-wrap: wrap; /* Permet aux éléments de se déplacer à la ligne suivante */
+    justify-content: space-between; /* Espacement entre les éléments */
+    gap: 20px; /* Espacement entre les éléments */
+    margin: 20px 0; /* Marge */
 }
 
+/* Styles pour chaque compétence */
 .competence {
-    flex: 1 1 calc(50% - 20px); /* Two items per row with some spacing */
-    box-sizing: border-box; /* Ensure padding/border doesn't affect width */
+    flex: 1 1 calc(50% - 20px); /* Flexibilité pour occuper 50% moins l'espacement */
+    box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
 }
 
-/* Ensure that the competence cards stretch to fill the space equally */
+/* Styles responsives pour les écrans de 768px et moins (tablettes) */
 @media (max-width: 768px) {
     .competence {
-        flex: 1 1 100%; /* Stack items in one column on smaller screens */
+        flex: 1 1 100%; /* Chaque compétence occupe toute la largeur */
+    }
+}
+
+/* Styles responsives pour les écrans de 480px et moins (téléphones mobiles) */
+@media (max-width: 480px) {
+    .competence {
+        padding: 10px; /* Réduit le padding pour les petits écrans */
+    }
+
+    .competence h2 {
+        font-size: 1rem; /* Taille de police des titres réduite pour les téléphones */
+    }
+
+    .competence ul, .competence p {
+        font-size: 0.8rem; /* Taille de police des listes et des paragraphes réduite pour les téléphones */
     }
 }
