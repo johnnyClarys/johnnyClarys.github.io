@@ -435,21 +435,6 @@ footer {
         font-size: 0.85rem; /* Réduit légèrement la taille de la police pour les listes et les paragraphes */
     }
 }
-
-/* Responsive pour les téléphones mobiles */
-@media (max-width: 480px) {
-    .competence {
-        padding: 10px; /* Réduit le padding pour les petits écrans */
-    }
-
-    .competence h2 {
-        font-size: 1rem; /* Taille de police des titres réduite pour les téléphones */
-    }
-
-    .competence ul, .competence p {
-        font-size: 0.8rem; /* Taille de police des listes et des paragraphes réduite pour les téléphones */
-    }
-}
 .character-container {
     background: #e3d4c1;
     border: 2px solid #6e4b3d;
@@ -488,3 +473,18 @@ footer {
     font-size: 16px;
     color: #333;
 }
+/* Responsive pour les téléphones mobiles */
+@media (max-width: 480px) {
+    .competence {
+        padding: 10px; /* Réduit le padding pour les petits écrans */
+    }
+
+    .competence h2 {
+        font-size: 1rem; /* Taille de police des titres réduite pour les téléphones */
+    }
+
+    .competence ul, .competence p {
+        font-size: 0.8rem; /* Taille de police des listes et des paragraphes réduite pour les téléphones */
+    }
+}
+
