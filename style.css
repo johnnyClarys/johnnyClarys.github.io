@@ -1,448 +1,442 @@
-/* Réinitialisation des marges et des espacements, et définition de la taille de boîte pour tous les éléments */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Styles généraux pour le corps de la page */
 body {
-    font-family: 'Georgia', serif; /* Police de caractères pour le texte */
-    background-image: url('fond.jpg'); /* Image de fond pour la page */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
-    background-size: cover; /* Recouvre toute la surface du corps avec l'image de fond */
-    color: #333; /* Couleur du texte */
-    padding: 20px; /* Espacement interne du corps */
+    font-family: 'Georgia', serif;
+    background-image: url('fond.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+    padding: 20px;
 }
 
 /* Styles pour la barre de navigation */
 .navbar {
-    background: #6e4b3d; /* Couleur de fond de la barre de navigation */
-    color: #fff; /* Couleur du texte */
-    padding: 10px 20px; /* Espacement interne de la barre de navigation */
-    border-radius: 5px; /* Coins arrondis */
-    margin-bottom: 20px; /* Marge inférieure */
+    background: #6e4b3d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .skill-bar {
-    height: 10px; /* Hauteur de la barre de compétence */
-    background-color: #6e4b3d; /* Couleur de fond de la barre de compétence */
-    width: 0; /* Largeur initiale à 0, mise à jour par JavaScript */
-    transition: width 2s ease; /* Transition fluide lors du changement de largeur */
+    height: 10px;
+    background-color: #6e4b3d; 
+    width: 0; /* Initialement à 0, sera mis à jour par le JS */
+    transition: width 2s ease;
 }
 
-/* Styles pour les projets */
 .project {
-    position: relative; /* Position relative pour le positionnement absolu des descriptions */
-    margin-bottom: 20px; /* Marge inférieure */
+    position: relative;
+    margin-bottom: 20px;
 }
 
 .project-description {
     display: none; /* Caché par défaut */
-    position: absolute; /* Positionnement absolu par rapport au parent */
-    background-color: #f9f9f9; /* Couleur de fond de la description */
-    border: 1px solid #ccc; /* Bordure de la description */
-    padding: 10px; /* Espacement interne */
-    width: auto; /* Largeur automatique */
-    height: auto; /* Hauteur automatique */
-    z-index: 1; /* Assure que la description se superpose aux autres éléments */
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    z-index: 1;
 }
 
 .project:hover .project-description {
     display: block; /* Affiche la description lors du survol */
 }
 
-/* Styles pour les éléments de la barre de navigation */
 .navbar ul {
-    list-style-type: none; /* Supprime les puces des listes */
-    display: flex; /* Affiche les éléments de la liste en ligne */
-    justify-content: center; /* Centre les éléments horizontalement */
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
     gap: 15px; /* Espacement entre les éléments de la liste */
 }
 
 .navbar li {
-    display: inline; /* Affiche les éléments de la liste en ligne */
+    display: inline;
 }
 
 .navbar a {
-    color: #fff; /* Couleur du texte des liens */
-    text-decoration: none; /* Supprime le soulignement des liens */
-    font-size: 1rem; /* Taille de la police des liens */
-    font-weight: bold; /* Met le texte en gras */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .navbar a:hover {
-    text-decoration: underline; /* Souligne les liens au survol */
+    text-decoration: underline;
 }
 
-/* Styles pour la section À propos */
+/* Styles pour la page À propos */
 .titre {
-    text-align: center; /* Centre le texte */
-    margin-bottom: 20px; /* Marge inférieure */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.qui-suis-je {
-    padding: 20px; /* Espacement interne */
-    max-width: 800px; /* Largeur maximale */
-    margin: 0 auto; /* Centre le bloc horizontalement */
+.qui-suis-je  {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.qui-suis-je h2 {
-    font-size: 1.5em; /* Taille de la police des sous-titres */
-    margin-bottom: 10px; /* Marge inférieure */
-    color: #333; /* Couleur du texte */
-    text-align: center; /* Centre le texte */
+.qui-suis-je H2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+
 }
 
 .qui-suis-je p {
-    font-size: 1em; /* Taille de la police des paragraphes */
-    line-height: 1.6; /* Hauteur de ligne pour le texte */
-    color: #555; /* Couleur du texte */
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
 }
 
-/* Styles pour l'en-tête du caractère */
 .character-header {
-    background: #e3d4c1; /* Couleur de fond */
-    border: 2px solid #6e4b3d; /* Bordure */
-    border-radius: 10px; /* Coins arrondis */
-    padding: 20px; /* Espacement interne */
-    margin-bottom: 20px; /* Marge inférieure */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    background: #e3d4c1;
+    border: 2px solid #6e4b3d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
-    display: flex; /* Affiche les éléments en ligne */
-    align-items: center; /* Aligne les éléments verticalement */
+    display: flex;
+    align-items: center;
 }
-
 .containerAbout {
-    text-align: center; /* Centre le texte */
+    text-align: center;
 }
-
 .logo {
-    flex: 1; /* Permet à l'élément de s'étendre */
+    flex: 1;
 }
-
 .passions {
-    margin: 15px; /* Marge */
+    margin: 15px;
 }
-
-.passions h2 {
-    margin: 15px; /* Marge */
-    padding: 15px; /* Espacement interne */
+.passions H2 {
+    margin: 15px;
+    padding: 15px;
 }
-
 .parcours-professionnel {
-    margin: 15px; /* Marge */
-}
+    margin: 15px;
 
-.parcours-professionnel h2 {
-    margin: 15px; /* Marge */
-    padding: 15px; /* Espacement interne */
 }
-
+.parcours-professionnel H2 {
+    margin: 15px;
+    padding: 15px;
+}
 .loisirs { 
-    margin: 15px; /* Marge */
-}
+    margin: 15px;
 
-.loisirs h2 { 
-    margin: 15px; /* Marge */
-    padding: 15px; /* Espacement interne */
 }
-
+.loisirs H2 { 
+    margin: 15px;
+    padding: 15px;
+}
 .portfolio {
-    margin: 15px; /* Marge */
-}
+    margin: 15px;
 
-.portfolio h2 {
-    margin: 15px; /* Marge */
-    padding: 15px; /* Espacement interne */
 }
-
+.portfolio H2{
+    margin: 15px;
+    padding: 15px;
+}
 .logo img {
-    width: 200px; /* Largeur de l'image */
-    height: auto; /* Hauteur automatique pour conserver les proportions */
+    width: 200px;
+    height: auto;
 }
 
 .header-fields {
-    display: flex; /* Affiche les champs en ligne */
-    flex: 3; /* Permet à l'élément de s'étendre */
-    flex-wrap: wrap; /* Permet aux éléments de se déplacer à la ligne suivante */
-    gap: 10px; /* Espacement entre les champs */
-    padding-left: 20px; /* Espacement interne à gauche */
-    width: 150px; /* Largeur */
+    display: flex;
+    flex: 3;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 20px;
+    width: 150px;
 }
 
 .header-field {
-    flex: 1 1 calc(33.333% - 20px); /* Flexibilité des champs */
-    display: flex; /* Affiche les éléments en ligne */
-    flex-direction: column; /* Aligne les éléments verticalement */
-    width: 150px; /* Largeur */
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    width: 150px;
 }
 
 .header-field label {
-    font-size: 0.8rem; /* Taille de la police des labels */
-    color: #6e4b3d; /* Couleur du texte */
-    margin-bottom: 5px; /* Marge inférieure */
-    width: 150px; /* Largeur */
+    font-size: 0.8rem;
+    color: #6e4b3d;
+    margin-bottom: 5px;
+    width: 150px;
 }
 
 .header-field input {
-    border: 1px solid #6e4b3d; /* Bordure */
-    border-radius: 4px; /* Coins arrondis */
-    padding: 5px; /* Espacement interne */
-    background: #f9f9f9; /* Couleur de fond */
-    color: #333; /* Couleur du texte */
-    width: 250px; /* Largeur */
+    border: 1px solid #6e4b3d;
+    border-radius: 4px;
+    padding: 5px;
+    background: #f9f9f9;
+    color: #333;
+    width: 250px;
 }
 
-/* Styles pour les compétences et les projets */
 .skills, .projects {
-    margin: 20px 0; /* Marge */
+    margin: 20px 0;
 }
 
 .skills {
-    width: 300px; /* Largeur */
-    float: left; /* Aligne à gauche */
+    width: 300px;
+    float: left;
 }
 
 .skill-card {
-    background: #fff; /* Couleur de fond */
-    border: 1px solid #6e4b3d; /* Bordure */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 10px; /* Espacement interne */
-    margin-bottom: 10px; /* Marge inférieure */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    background: #fff;
+    border: 1px solid #6e4b3d;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skill-card h4 {
-    display: flex; /* Affiche les éléments en ligne */
-    justify-content: space-between; /* Espacement entre les éléments */
-    align-items: center; /* Aligne les éléments verticalement */
-    font-size: 1rem; /* Taille de la police */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
 }
 
 .skill-level {
-    background: #6e4b3d; /* Couleur de fond */
-    color: #fff; /* Couleur du texte */
-    padding: 2px 5px; /* Espacement interne */
-    border-radius: 3px; /* Coins arrondis */
+    background: #6e4b3d;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
 }
 
-/* Styles pour les projets */
 .project {
-    background: #e3d4c1; /* Couleur de fond */
-    border: 1px solid #6e4b3d; /* Bordure */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 10px; /* Espacement interne */
-    margin-bottom: 20px; /* Marge inférieure */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour la transformation et l'ombre portée */
-    text-align: center; /* Centre le texte */
+    background: #e3d4c1;
+    border: 1px solid #6e4b3d;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
 .projects-container {
     border: 2px solid #000; /* Couleur et épaisseur de la bordure */
     border-radius: 10px; /* Coins arrondis */
-    float: right; /* Aligne à droite */
-    width: 850px; /* Largeur */
-    text-align: center; /* Centre le texte */
+    float: right;
+    width: 850px;
+    text-align: center;
 }
 
 .project h4 {
-    font-size: 1.1rem; /* Taille de la police des titres */
-    margin-bottom: 5px; /* Marge inférieure */
-    text-align: center; /* Centre le texte */
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .project p {
-    margin: 5px 0; /* Marges supérieure et inférieure */
+    margin: 5px 0;
 }
 
 .project a {
-    color: #6e4b3d; /* Couleur du texte des liens */
-    text-decoration: none; /* Supprime le soulignement des liens */
-    font-weight: bold; /* Met le texte en gras */
+    color: #6e4b3d;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .project:hover {
-    transform: translateY(-5px); /* Déplace le projet vers le haut au survol */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre portée plus marquée */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-/* Styles pour les liens sociaux */
 .social-links {
-    text-align: center; /* Centre le texte */
+text-align: center;
 }
-
-/* Styles pour le pied de page */
 footer {
-    text-align: center; /* Centre le texte */
-    margin-top: 20px; /* Marge supérieure */
-    font-size: 0.9rem; /* Taille de la police */
-    clear: both; /* Nettoie les flottants */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    clear: both;
 }
 
-/* Styles responsives pour les écrans de 768px et moins (tablettes et petits écrans) */
+/* Responsive Design */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column; /* Aligne les éléments en colonne */
-        align-items: center; /* Centre les éléments */
-        text-align: center; /* Centre le texte */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .logo {
-        margin-bottom: 10px; /* Marge inférieure */
+        margin-bottom: 10px;
     }
 
     .header-fields {
-        width: 100%; /* Largeur à 100% */
-        padding-left: 0; /* Supprime l'espacement interne à gauche */
+        width: 100%;
+        padding-left: 0;
     }
 
     .header-field {
-        flex: 1 1 100%; /* Les champs occupent toute la largeur */
-        max-width: none; /* Enlève la largeur maximale */
-        margin-bottom: 10px; /* Marge inférieure */
+        flex: 1 1 100%;
+        max-width: none;
+        margin-bottom: 10px;
     }
 
     .header-field input {
-        width: 100%; /* Largeur à 100% */
+        width: 100%;
     }
 
     .skills {
-        width: 100%; /* Largeur à 100% */
-        float: none; /* Supprime le flottement */
+        width: 100%;
+        float: none;
     }
 
     .projects-container {
-        width: 100%; /* Largeur à 100% */
-        border: none; /* Supprime la bordure */
-        margin-top: 20px; /* Marge supérieure */
-        padding: 0 10px; /* Espacement interne */
-        box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+        width: 100%;
+        border: none; /* Supprimer la bordure pour plus de flexibilité */
+        margin-top: 20px;
+        padding: 0 10px; /* Ajouter un peu de padding pour éviter que le contenu touche les bords */
+        box-sizing: border-box; /* Inclure le padding et les bordures dans la largeur totale */
     }
 
     .project {
-        width: 100%; /* Largeur à 100% */
-        max-width: none; /* Enlève la largeur maximale */
+        width: 100%; /* Chaque projet prend toute la largeur disponible */
+        max-width: none; /* Enlève la largeur maximale pour plus de flexibilité */
         box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
-        margin-bottom: 20px; /* Marge inférieure */
+        margin-bottom: 20px;
     }
 
     .project-description {
-        display: block; /* Affiche toujours la description */
-        position: relative; /* Position relative pour un meilleur alignement */
-        width: 100%; /* Largeur à 100% */
-        box-shadow: none; /* Enlève l'ombre portée */
+        display: block; /* Toujours afficher la description dans les petits écrans */
+        position: relative;
+        width: 100%;
+        box-shadow: none; /* Enlever l'ombre pour simplifier le design */
     }
 
     footer {
-        font-size: 0.8rem; /* Taille de la police réduite */
+        font-size: 0.8rem;
     }
 
     .social-icon {
-        font-size: 1.5em; /* Taille des icônes sociales */
-        margin: 0 5px; /* Marges latérales */
+        font-size: 1.5em;
+        margin: 0 5px;
     }
 }
 
-/* Styles responsives pour les écrans de 1200px et plus (grands écrans) */
 @media (min-width: 1200px) {
     .header-container {
-        max-width: 1200px; /* Largeur maximale */
-        margin: 0 auto; /* Centre horizontalement */
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .projects-container {
-        max-width: 1200px; /* Largeur maximale */
-        margin: 0 auto; /* Centre horizontalement */
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }
-
-/* Styles pour la section compétences */
 .competences {
-    margin: 20px 0; /* Marge */
+    margin: 20px 0;
 }
-
 .competenceTitre {
-    text-align: center; /* Centre le texte */
+    text-align: center;
 }
 
 .competence {
-    background: #e3d4c1; /* Couleur de fond */
-    border: 2px solid #6e4b3d; /* Bordure */
-    border-radius: 10px; /* Coins arrondis */
-    padding: 15px; /* Espacement interne */
-    margin-bottom: 20px; /* Marge inférieure */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
-    width: 50px; /* Largeur */
-    height: auto; /* Hauteur automatique */
+    background: #e3d4c1;
+    border: 2px solid #6e4b3d;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: auto;
 }
 
 .competence h2 {
-    font-family: 'Georgia', serif; /* Police de caractères */
-    color: #6e4b3d; /* Couleur du texte */
-    margin-bottom: 10px; /* Marge inférieure */
-    border-bottom: 2px solid #6e4b3d; /* Bordure inférieure */
-    padding-bottom: 5px; /* Espacement interne inférieur */
+    font-family: 'Georgia', serif;
+    color: #6e4b3d;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #6e4b3d;
+    padding-bottom: 5px;
 }
 
 .competence ul {
-    list-style-type: none; /* Supprime les puces des listes */
-    padding: 0; /* Supprime le padding */
-    margin: 0; /* Supprime la marge */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .competence ul li {
-    background: #fff; /* Couleur de fond */
-    margin: 10px 0; /* Marges supérieure et inférieure */
-    padding: 10px; /* Espacement interne */
-    border: 1px solid #6e4b3d; /* Bordure */
-    border-radius: 5px; /* Coins arrondis */
-    text-shadow: 1px 1px #d4aa73; /* Ombre portée du texte */
-    font-family: 'Georgia', serif; /* Police de caractères */
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #6e4b3d;
+    border-radius: 5px;
+    text-shadow: 1px 1px #d4aa73;
+    font-family: 'Georgia', serif;
 }
 
 .competence p a {
-    color: #6e4b3d; /* Couleur du texte des liens */
-    text-decoration: none; /* Supprime le soulignement des liens */
-    font-weight: bold; /* Met le texte en gras */
+    color: #6e4b3d;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .competence p a:hover {
-    text-decoration: underline; /* Souligne les liens au survol */
+    text-decoration: underline;
 }
 
 .competence p {
-    margin-top: 15px; /* Marge supérieure */
-    font-family: 'Georgia', serif; /* Police de caractères */
-    color: #333; /* Couleur du texte */
+    margin-top: 15px;
+    font-family: 'Georgia', serif;
+    color: #333;
 }
-
-/* Conteneur pour les compétences */
 .competences-container {
-    display: flex; /* Affiche les éléments en ligne */
-    flex-wrap: wrap; /* Permet aux éléments de se déplacer à la ligne suivante */
-    justify-content: space-between; /* Espacement entre les éléments */
-    gap: 20px; /* Espacement entre les éléments */
-    margin: 20px 0; /* Marge */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between items */
+    margin: 20px 0;
 }
 
-/* Styles pour chaque compétence */
 .competence {
-    flex: 1 1 calc(50% - 20px); /* Flexibilité pour occuper 50% moins l'espacement */
-    box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+    flex: 1 1 calc(50% - 20px); 
+    box-sizing: border-box; 
 }
 
-/* Styles responsives pour les écrans de 768px et moins (tablettes) */
 @media (max-width: 768px) {
     .competence {
+        flex: 1 1 100%;
+    }
+}
+/* Responsive pour les tablettes */
+@media (max-width: 768px) {
+    .competences-container {
+        max-width: 100%;
+        flex-direction: column; /* Les compétences s'affichent en une seule colonne */
+    }
+
+    .competence {
         flex: 1 1 100%; /* Chaque compétence occupe toute la largeur */
+        margin-bottom: 20px;
+    }
+
+    .competence h2 {
+        font-size: 1.1rem; /* Ajuste la taille de la police des titres pour les tablettes */
+    }
+
+    .competence ul, .competence p {
+        font-size: 0.85rem; /* Réduit légèrement la taille de la police pour les listes et les paragraphes */
     }
 }
 
-/* Styles responsives pour les écrans de 480px et moins (téléphones mobiles) */
+/* Responsive pour les téléphones mobiles */
 @media (max-width: 480px) {
     .competence {
         padding: 10px; /* Réduit le padding pour les petits écrans */
@@ -455,4 +449,42 @@ footer {
     .competence ul, .competence p {
         font-size: 0.8rem; /* Taille de police des listes et des paragraphes réduite pour les téléphones */
     }
+}
+.character-container {
+    background: #e3d4c1;
+    border: 2px solid #6e4b3d;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.character-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #6e4b3d;
+    margin-bottom: 16px;
+}
+
+.character-info {
+    font-family: 'Georgia', serif;
+}
+
+.character-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.character-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.character-text {
+    font-size: 16px;
+    color: #333;
 }
