@@ -435,6 +435,21 @@ footer {
         font-size: 0.85rem; /* Réduit légèrement la taille de la police pour les listes et les paragraphes */
     }
 }
+
+/* Responsive pour les téléphones mobiles */
+@media (max-width: 480px) {
+    .competence {
+        padding: 10px; /* Réduit le padding pour les petits écrans */
+    }
+
+    .competence h2 {
+        font-size: 1rem; /* Taille de police des titres réduite pour les téléphones */
+    }
+
+    .competence ul, .competence p {
+        font-size: 0.8rem; /* Taille de police des listes et des paragraphes réduite pour les téléphones */
+    }
+}
 .character-container {
     background: #e3d4c1;
     border: 2px solid #6e4b3d;
@@ -473,18 +488,167 @@ footer {
     font-size: 16px;
     color: #333;
 }
-/* Responsive pour les téléphones mobiles */
-@media (max-width: 480px) {
+/* Responsive Design */
+
+/* Pour les écrans de taille égale ou inférieure à 768px (tablettes et téléphones) */
+@media (max-width: 768px) {
+    .competences-container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
     .competence {
-        padding: 10px; /* Réduit le padding pour les petits écrans */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
-    .competence h2 {
-        font-size: 1rem; /* Taille de police des titres réduite pour les téléphones */
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
     }
 
-    .competence ul, .competence p {
-        font-size: 0.8rem; /* Taille de police des listes et des paragraphes réduite pour les téléphones */
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
     }
 }
 
+/* Pour les écrans de taille égale ou inférieure à 480px (téléphones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+}
+
+/* Pour les grands écrans de taille égale ou supérieure à 1200px */
+@media (min-width: 1200px) {
+    .competences-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+/* Responsive Design for Contact Section */
+
+/* Pour les écrans de taille égale ou inférieure à 768px (tablettes et téléphones) */
+@media (max-width: 768px) {
+    .character-container {
+        padding: 20px;
+        width: auto;
+    }
+
+    .character-header {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .character-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .character-info-item {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .character-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .character-text {
+        display: block;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .social-links h2 {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icon {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+}
+
+/* Pour les écrans de taille égale ou inférieure à 480px (téléphones) */
+@media (max-width: 480px) {
+    .character-header {
+        font-size: 1.25rem;
+    }
+
+    .character-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .character-text {
+        font-size: 0.9rem;
+    }
+
+    .social-links h2 {
+        font-size: 1rem;
+    }
+
+    .social-icon {
+        font-size: 1rem;
+    }
+}
+
+/* Pour les grands écrans de taille égale ou supérieure à 1200px */
+@media (min-width: 1200px) {
+    .character-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .character-info-item {
+        margin-bottom: 20px;
+    }
+}
