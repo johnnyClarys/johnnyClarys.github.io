@@ -1,7 +1,5 @@
 User-agent: *
-Disallow: /competences.html
-Disallow: /pdp.png
-Disallow: /fond.jpg
+
 
 # Autoriser tous les autres robots à accéder au reste du site
 Allow: /
