@@ -12,6 +12,82 @@ body {
     color: #333;
     padding: 20px;
 }
+.containerD20 {
+    text-align: center;
+}
+
+.dice {
+    display: inline-block;
+    position: relative; /* Position relative pour positionner le numéro absolument */
+}
+
+#diceImage {
+    width: 200px;
+    height: 200px;
+    transition: transform 1s ease;
+    cursor: pointer; /* Ajoute un curseur pointeur pour indiquer que c'est cliquable */
+}
+
+/* Animation pour faire tourner le dé */
+@keyframes rotateDice {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Style pour le numéro affiché */
+#number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+/* Style par défaut pour le bouton "Click on Me" */
+#clickOnMe {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #6e4b3d;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Changer la couleur de fond lors du survol */
+#clickOnMe:hover {
+    background-color: #5a3b2e;
+}
+
+/* Responsive Design pour les tablettes */
+@media (max-width: 768px) {
+    #clickOnMe {
+        font-size: 0.9rem; /* Réduit légèrement la taille de la police */
+        padding: 8px 16px; /* Ajuste le padding pour les écrans plus petits */
+    }
+}
+
+/* Responsive Design pour les téléphones mobiles */
+@media (max-width: 480px) {
+    #clickOnMe {
+        font-size: 0.8rem; /* Réduit encore la taille de la police */
+        padding: 6px 12px; /* Ajuste le padding pour les écrans très petits */
+        width: 100%; /* Rend le bouton plein écran pour les petits écrans */
+    }
+}
+
+
+canvas {
+    display: block;
+}
 
 /* Styles pour la barre de navigation */
 .navbar {
