@@ -30,12 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Afficher le message en fonction du résultat
         if (randomFace === 20) {
             resultMessage.textContent = "WOUAWWW REUSSITE CRITIQUE";
+              resultMessage.style.color = "green";
         } else if (randomFace >= 12) {
             resultMessage.textContent = "BRAVO action réussie !";
+              resultMessage.style.color = "blue";
         } else if (randomFace === 1) {
             resultMessage.textContent = "FUMBLE !";
+              resultMessage.style.color = "red";
         } else {
             resultMessage.textContent = "Dommage, relance";
+              resultMessage.style.color = "orange";
         }
     }
 
