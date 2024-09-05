@@ -28,7 +28,6 @@ body {
     cursor: pointer; /* Ajoute un curseur pointeur pour indiquer que c'est cliquable */
 }
 
-/* Animation pour faire tourner le dé */
 @keyframes rotateDice {
     from {
         transform: rotate(0deg);
