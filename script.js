@@ -9,9 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const dice = document.getElementById('diceImage');
     const resultMessage = document.getElementById('resultMessage');
     const number = document.getElementById('number');
-    const clickText = document.getElementById('clickOnMe'); // bouton pour le texte
+    const clickButton = document.getElementById('clickOnMe'); // bouton pour le jet
 
-    dice.addEventListener('click', () => {
+    // Fonction pour lancer le dé
+    function rollDice() {
         // Ajouter la classe d'animation pour faire tourner l'image
         dice.style.animation = 'rotateDice 1s ease';
 
@@ -26,22 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
             dice.style.animation = '';
         }, { once: true }); // L'événement est écouté une seule fois
 
-        // Cacher le texte du bouton après un clic
-        clickText.style.display = 'none';
-
         // Afficher le message en fonction du résultat
         if (randomFace === 20) {
             resultMessage.textContent = "WOUAWWW REUSSITE CRITIQUE";
-            resultMessage.style.color = "green";
         } else if (randomFace >= 12) {
             resultMessage.textContent = "BRAVO action réussie !";
-            resultMessage.style.color = "blue";
         } else if (randomFace === 1) {
             resultMessage.textContent = "FUMBLE !";
-            resultMessage.style.color = "red";
         } else {
             resultMessage.textContent = "Dommage, relance";
-            resultMessage.style.color = "orange";
         }
-    });
+    }
+
+    // Ajouter un événement de clic à l'image du dé
+    dice.addEventListener('click', rollDice);
+
+    // Ajouter un événement de clic au bouton
+    clickButton.addEventListener('click', rollDice);
 });
