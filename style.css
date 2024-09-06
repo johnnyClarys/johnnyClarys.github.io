@@ -727,3 +727,166 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+
+section.passions {
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+section.parcours-professionnel {
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+section.loisirs {
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+section.portfolio {
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Optionnel: ajout d'un effet au survol */
+section:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+/* Animation pour les sections */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.section-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.section-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.titre {
+    text-align: center;
+}
+
+.containerAbout {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+.logo img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.character-container {
+    padding: 20px;
+}
+
+.character-header {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.character-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.character-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.character-icon {
+    margin-right: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+/* Animation pour les compétences */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Appliquer les animations aux compétences */
+.competence:nth-child(odd) {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.competence:nth-child(even) {
+    animation: slideInRight 1s ease-out forwards;
+}
+
