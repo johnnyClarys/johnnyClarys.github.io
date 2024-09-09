@@ -542,7 +542,25 @@ footer {
     color: #6e4b3d;
     margin-bottom: 16px;
 }
+.CV-container {
+    background: #e3d4c1;
+    border: 2px solid #6e4b3d;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    float: right;
+    text-align: center;
+}
 
+.CV-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #6e4b3d;
+    margin-bottom: 16px;
+}
 .character-info {
     font-family: 'Georgia', serif;
 }
