@@ -12,6 +12,19 @@ body {
     color: #333;
     padding: 20px;
 }
+
+.pdp {
+    width: 200px;
+    animation: spiral 2s linear forwards;
+}
+@keyframes spiral {
+    0% {
+        transform: rotate(0deg) translate(0);
+    }
+    100% {
+        transform: rotate(720deg) translate(100px);
+    }
+}
 .containerD20 {
     text-align: center;
 }
@@ -552,6 +565,24 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     float: right;
     text-align: center;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform: scale(0.5);
+    animation: tampon 1s forwards;
+}
+@keyframes tampon {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .CV-header {
@@ -561,6 +592,44 @@ footer {
     color: #6e4b3d;
     margin-bottom: 16px;
 }
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Espace entre les liens */
+    align-items: center;
+    flex-wrap: wrap; /* Si la fenêtre est trop petite, les liens passeront à la ligne */
+}
+
+.social-links a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.social-icon {
+    margin-right: 10px; /* Espacement entre les icônes */
+}
+
+.social-links a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0073e6; /* Change la couleur au survol */
+    transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+}
+.social-links h2 {
+    width: 100%; /* Le titre reste au-dessus */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
 .lireCV {
     padding-bottom: 20px;
 }

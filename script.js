@@ -49,3 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ajouter un événement de clic au bouton
     clickButton.addEventListener('click', rollDice);
 });
+window.onload = function() {
+    const tamponDiv = document.querySelector('.tampon');
+    tamponDiv.style.opacity = 1;
+};
