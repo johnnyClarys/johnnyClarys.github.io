@@ -12,6 +12,17 @@ body {
     color: #333;
     padding: 20px;
 }
+.language-switcher {
+    display: flex;
+    align-items: end;
+    gap: 10px; /* Espace entre les drapeaux */
+}
+
+.language-switcher img {
+    width: 20px; /* Ajustez la taille du drapeau */
+    height: auto; /* Conserve les proportions */
+    cursor: pointer; /* Change le curseur au survol */
+}
 
 .pdp {
     width: 200px;
