@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Johnny Clarys - Développeur Web avec des compétences en HTML, CSS, JS, React, Bootstrap, et Sass.">
+    <meta name="keywords" content="Portfolio, Développeur Web, HTML, CSS, JavaScript, React, Bootstrap, Sass">
+    <title>Portfolio - Feuille de Personnage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Balises meta Open Graph (Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://johnnyclarys.github.io/">
+    <meta property="og:title" content="Johnny Clarys - Portfolio">
+    <meta property="og:description" content="Le portfolio de Johnny Clarys">
+    <meta property="og:image" content="page.png">
+
+    <!-- Balises meta Twitter Cards (Twitter)-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@john_le_mj">
+    <meta name="twitter:title" content="Johnny Clarys - Portfolio">
+    <meta name="twitter:description" content="Le portfolio de Johnny Clarys">
+    <meta name="twitter:image" content="page.png">
+    <meta name="twitter:url" content="page.png">
+  
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/portfolioUS/indexEN.html">Home</a></li>
+                <li><a href="/portfolioUS/aboutEN.html">About</a></li>
+                <li><a href="/portfolioUS/competencesEN.html">Skills</a></li>
+            </ul>
+            <div class="language-switcher">
+                <a href="../index.html">
+                    <img src="fr.png" alt="Français" title="Français" />
+                </a>
+                <a href="/portfolioUS/indexEN.html">
+                    <img src="en.webp" alt="English" title="English" />
+                </a>
+            </div>
+        </nav>
+        
+        <div class="titre">
+            <h1>My Portfolio</h1>
+        </div>
+    </header>
+    
+    <header class="character-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="pdp.png" alt="Photo de profil de Johnny Clarys" class="pdp">
+            </div>
+            <div class="header-fields">  
+                <div class="header-field">
+                    <label for="character-name">Character Name</label>
+                    <input type="text" id="character-name" placeholder="Johnny Clarys" aria-label="Nom du personnage">
+                </div>
+                <div class="header-field">
+                    <label for="class-level">Classe & Level</label>
+                    <input type="text" id="class-level" placeholder="Développeur Web Niveau 1" aria-label="Classe et niveau">
+                </div>
+                <div class="header-field">
+                    <label for="background">Background</label>
+                    <input type="text" id="background" placeholder="Passionné de l'informatique" aria-label="Historique">
+                </div>
+                <div class="header-field">
+                    <label for="race">Race</label>
+                    <input type="text" id="race" placeholder="Humain" aria-label="Race">
+                </div>
+                <div class="header-field">
+                    <label for="alignment">Alignment</label>
+                    <input type="text" id="alignment" placeholder="Loyal Bon" aria-label="Alignement">
+                </div>
+                <div class="header-field">
+                    <label for="experience">Experience</label>
+                    <input type="text" id="experience" placeholder="Débutant / 00 XP" aria-label="Points d'expérience">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="skills">
+            <h2>Compétences</h2>
+            <div class="skill-card">
+                <i class="fab fa-html5"></i><h4>HTML <span class="skill-level">17</span></h4>
+                <div class="skill-bar" data-level="17"></div>        
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt"></i><h4>CSS <span class="skill-level">16</span></h4>
+                <div class="skill-bar" data-level="16"></div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js"></i><h4>JS <span class="skill-level">14</span></h4>
+                <div class="skill-bar" data-level="14"></div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-react"></i><h4>React <span class="skill-level">14</span></h4>
+                <div class="skill-bar" data-level="14"></div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-bootstrap"></i><h4>Bootstrap <span class="skill-level">15</span></h4>
+                <div class="skill-bar" data-level="15"></div>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-sass"></i><h4>Sass <span class="skill-level">12</span></h4>
+                <div class="skill-bar" data-level="12"></div>
+            </div>
+        </div>
+
+        <div class="containerD20">
+            <button id="clickOnMe">Wisdom Throw, Difficulty 12 / Roll the dice</button>
+            <div id="resultMessage"></div>
+            <div class="dice" id="dice">
+                <img id="diceImage" src="D20b.png" alt="Dé">
+                <div id="number">-</div>
+            </div>
+        </div>
+
+        <div class="projects-container">
+            <div class="projects">
+                <h2>Equipement / Projects</h2>
+                <div class="project">
+                    <a href="https://github.com/johnnyClarys/Johnny_Clarys_-Projet-2---Creez-la-page-d-accueil-agence-de-voyage-HTML-CSS" target="_blank" rel="noopener noreferrer">
+                        <p>
+                            PROJECT -- Create a travel agency homepage
+                            <br>See the project on GitHub
+                        </p>
+                        <div class="project-description">
+                            Summary: Design of a home Page for a travel agency in HTML  and CSS.
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="https://github.com/johnnyClarys/Projet3_Apprenez_a_programmer_avec_JS" target="_blank" rel="noopener noreferrer">
+                        <p>
+                            PROJECT -- Learn to program with JavaScript
+                            <br>See the project on GitHub
+                            
+                            
+                        </p>
+                        <div class="project-description">
+                            Summary: Interactive project to learn the basics of JavaScript.
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="https://github.com/johnnyClarys/projet-4---Debugger-et-optimiser-un-site-web" target="_blank" rel="noopener noreferrer">
+                        <p>
+                            PROJECT -- Debug and Optimize a Website
+                            <br>See the project on GitHub
+                            
+                           
+                        </p>
+                        <div class="project-description">
+                            Summary: Performance improvement and bug fixes on an existing website.
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="https://github.com/johnnyClarys/projet-5--React" target="_blank" rel="noopener noreferrer">
+                        <p>
+                            PROJET -- React
+                            <br>See the projet sur GitHub
+                        </p>
+                        <div class="project-description">
+                            Résumé : Building a web application using React.
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="https://github.com/johnnyClarys/projet6" target="_blank" rel="noopener noreferrer">
+                        <p>
+                            PROJECT -- My Old Grimoire
+                            <br>See the project on GitHub
+
+
+                        </p>
+                        <div class="project-description">
+                            Summary: Create an interactive website integrating an API to display dynamic data.
+                        </div>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="https://github.com/johnnyClarys/projet-7----Menu-Maker" target="_blank" rel="noopener noreferrer">
+                        <p>
+                            PROJET -- Menu Maker
+                            <br>See the project on GitHub
+                        </p>
+                        <div class="project-description">
+                            Résumé : Plan the developpement of your client's site.
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div> 
+    </main>
+    
+    <footer>
+        <div class="social-links">
+            <h2>Follow me</h2>
+            <a href="https://www.facebook.com/johnny.clarys?locale=fr_FR" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="https://www.instagram.com/john_le_mj/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="https://github.com/johnnyClarys" target="_blank" class="social-icon"><i class="fab fa-github"></i>Github</a>
+            <a href="https://www.linkedin.com/in/johnny-clarys-63b64b2b0/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i>LinkedIn</a>
+        </div>
+        <p>© Johnny Clarys 2024 - Mon Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

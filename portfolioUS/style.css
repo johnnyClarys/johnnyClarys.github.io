@@ -1,0 +1,992 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-image: url('fond.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+    padding: 20px;
+}
+.language-switcher {
+    display: flex;
+    gap: 10px; /* Espace entre les drapeaux */
+}
+
+.language-switcher img {
+    width: 20px; /* Ajustez la taille du drapeau */
+    height: auto; /* Conserve les proportions */
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+.pdp {
+    width: 200px;
+    animation: spiral 2s linear forwards;
+}
+@keyframes spiral {
+    0% {
+        transform: rotate(0deg) translate(0);
+    }
+    100% {
+        transform: rotate(720deg) translate(100px);
+    }
+}
+.containerD20 {
+    text-align: center;
+}
+
+.dice {
+    display: inline-block;
+    position: relative; /* Position relative pour positionner le numéro absolument */
+}
+
+#diceImage {
+    width: 200px;
+    height: 200px;
+    transition: transform 1s ease;
+    cursor: pointer; /* Ajoute un curseur pointeur pour indiquer que c'est cliquable */
+}
+
+@keyframes rotateDice {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Style pour le numéro affiché */
+#number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+/* Style par défaut pour le bouton "Click on Me" */
+#clickOnMe {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #6e4b3d;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Changer la couleur de fond lors du survol */
+#clickOnMe:hover {
+    background-color: #5a3b2e;
+}
+
+/* Responsive Design pour les tablettes */
+@media (max-width: 768px) {
+    #clickOnMe {
+        font-size: 0.9rem; /* Réduit légèrement la taille de la police */
+        padding: 8px 16px; /* Ajuste le padding pour les écrans plus petits */
+    }
+}
+
+/* Responsive Design pour les téléphones mobiles */
+@media (max-width: 480px) {
+    #clickOnMe {
+        font-size: 0.8rem; /* Réduit encore la taille de la police */
+        padding: 6px 12px; /* Ajuste le padding pour les écrans très petits */
+        width: 100%; /* Rend le bouton plein écran pour les petits écrans */
+    }
+}
+
+
+canvas {
+    display: block;
+}
+
+/* Styles pour la barre de navigation */
+.navbar {
+    background: #6e4b3d;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #6e4b3d; 
+    width: 0; /* Initialement à 0, sera mis à jour par le JS */
+    transition: width 2s ease;
+}
+
+.project {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.project-description {
+    display: none; /* Caché par défaut */
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
+.project:hover .project-description {
+    display: block; /* Affiche la description lors du survol */
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacement entre les éléments de la liste */
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour la page À propos */
+.titre {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.qui-suis-je  {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.qui-suis-je H2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+
+}
+
+.qui-suis-je p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.character-header {
+    background: #e3d4c1;
+    border: 2px solid #6e4b3d;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+.containerAbout {
+    text-align: center;
+}
+.logo {
+    flex: 1;
+}
+.passions {
+    margin: 15px;
+}
+.passions H2 {
+    margin: 15px;
+    padding: 15px;
+}
+.parcours-professionnel {
+    margin: 15px;
+
+}
+.parcours-professionnel H2 {
+    margin: 15px;
+    padding: 15px;
+}
+.loisirs { 
+    margin: 15px;
+
+}
+.loisirs H2 { 
+    margin: 15px;
+    padding: 15px;
+}
+.portfolio {
+    margin: 15px;
+
+}
+.portfolio H2{
+    margin: 15px;
+    padding: 15px;
+}
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.header-fields {
+    display: flex;
+    flex: 3;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 20px;
+    width: 150px;
+}
+
+.header-field {
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.header-field label {
+    font-size: 0.8rem;
+    color: #6e4b3d;
+    margin-bottom: 5px;
+    width: 150px;
+}
+
+.header-field input {
+    border: 1px solid #6e4b3d;
+    border-radius: 4px;
+    padding: 5px;
+    background: #f9f9f9;
+    color: #333;
+    width: 250px;
+}
+
+.skills, .projects {
+    margin: 20px 0;
+}
+
+.skills {
+    width: 300px;
+    float: left;
+}
+
+.skill-card {
+    background: #fff;
+    border: 1px solid #6e4b3d;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.skill-level {
+    background: #6e4b3d;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.project {
+    background: #e3d4c1;
+    border: 1px solid #6e4b3d;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.projects-container {
+    border: 2px solid #000; /* Couleur et épaisseur de la bordure */
+    border-radius: 10px; /* Coins arrondis */
+    float: right;
+    width: 850px;
+    text-align: center;
+}
+
+.project h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.project p {
+    margin: 5px 0;
+}
+
+.project a {
+    color: #6e4b3d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.social-links {
+text-align: center;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    clear: both;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .header-fields {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header-field {
+        flex: 1 1 100%;
+        max-width: none;
+        margin-bottom: 10px;
+    }
+
+    .header-field input {
+        width: 100%;
+    }
+
+    .skills {
+        width: 100%;
+        float: none;
+    }
+
+    .projects-container {
+        width: 100%;
+        border: none; /* Supprimer la bordure pour plus de flexibilité */
+        margin-top: 20px;
+        padding: 0 10px; /* Ajouter un peu de padding pour éviter que le contenu touche les bords */
+        box-sizing: border-box; /* Inclure le padding et les bordures dans la largeur totale */
+    }
+
+    .project {
+        width: 100%; /* Chaque projet prend toute la largeur disponible */
+        max-width: none; /* Enlève la largeur maximale pour plus de flexibilité */
+        box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+        margin-bottom: 20px;
+    }
+
+    .project-description {
+        display: block; /* Toujours afficher la description dans les petits écrans */
+        position: relative;
+        width: 100%;
+        box-shadow: none; /* Enlever l'ombre pour simplifier le design */
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+    .social-icon {
+        font-size: 1.5em;
+        margin: 0 5px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .projects-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+.competences {
+    margin: 20px 0;
+}
+.competenceTitre {
+    text-align: center;
+}
+
+.competence {
+    background: #e3d4c1;
+    border: 2px solid #6e4b3d;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: auto;
+}
+
+.competence h2 {
+    font-family: 'Georgia', serif;
+    color: #6e4b3d;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #6e4b3d;
+    padding-bottom: 5px;
+}
+
+.competence ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.competence ul li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #6e4b3d;
+    border-radius: 5px;
+    text-shadow: 1px 1px #d4aa73;
+    font-family: 'Georgia', serif;
+}
+
+.competence p a {
+    color: #6e4b3d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.competence p a:hover {
+    text-decoration: underline;
+}
+
+.competence p {
+    margin-top: 15px;
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+.competences-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between items */
+    margin: 20px 0;
+}
+
+.competence {
+    flex: 1 1 calc(50% - 20px); 
+    box-sizing: border-box; 
+}
+
+@media (max-width: 768px) {
+    .competence {
+        flex: 1 1 100%;
+    }
+}
+/* Responsive pour les tablettes */
+@media (max-width: 768px) {
+    .competences-container {
+        max-width: 100%;
+        flex-direction: column; /* Les compétences s'affichent en une seule colonne */
+    }
+
+    .competence {
+        flex: 1 1 100%; /* Chaque compétence occupe toute la largeur */
+        margin-bottom: 20px;
+    }
+
+    .competence h2 {
+        font-size: 1.1rem; /* Ajuste la taille de la police des titres pour les tablettes */
+    }
+
+    .competence ul, .competence p {
+        font-size: 0.85rem; /* Réduit légèrement la taille de la police pour les listes et les paragraphes */
+    }
+}
+
+/* Responsive pour les téléphones mobiles */
+@media (max-width: 480px) {
+    .competence {
+        padding: 10px; /* Réduit le padding pour les petits écrans */
+    }
+
+    .competence h2 {
+        font-size: 1rem; /* Taille de police des titres réduite pour les téléphones */
+    }
+
+    .competence ul, .competence p {
+        font-size: 0.8rem; /* Taille de police des listes et des paragraphes réduite pour les téléphones */
+    }
+}
+.character-container {
+    background: #e3d4c1;
+    border: 2px solid #6e4b3d;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.character-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #6e4b3d;
+    margin-bottom: 16px;
+}
+.CV-container {
+    background: #e3d4c1;
+    border: 2px solid #6e4b3d;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    float: right;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform: scale(0.5);
+    animation: tampon 1s forwards;
+}
+@keyframes tampon {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.CV-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #6e4b3d;
+    margin-bottom: 16px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Espace entre les liens */
+    align-items: center;
+    flex-wrap: wrap; /* Si la fenêtre est trop petite, les liens passeront à la ligne */
+}
+
+.social-links a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.social-icon {
+    margin-right: 10px; /* Espacement entre les icônes */
+}
+
+.social-links a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0073e6; /* Change la couleur au survol */
+    transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+}
+.social-links h2 {
+    width: 100%; /* Le titre reste au-dessus */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.lireCV {
+    padding-bottom: 20px;
+}
+.character-info {
+    font-family: 'Georgia', serif;
+}
+
+.character-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.character-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.character-text {
+    font-size: 16px;
+    color: #333;
+}
+/* Responsive Design */
+
+/* Pour les écrans de taille égale ou inférieure à 768px (tablettes et téléphones) */
+@media (max-width: 768px) {
+    .competences-container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .competence {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
+    }
+}
+
+/* Pour les écrans de taille égale ou inférieure à 480px (téléphones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+}
+
+/* Pour les grands écrans de taille égale ou supérieure à 1200px */
+@media (min-width: 1200px) {
+    .competences-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+/* Responsive Design for Contact Section */
+
+/* Pour les écrans de taille égale ou inférieure à 768px (tablettes et téléphones) */
+@media (max-width: 768px) {
+    .character-container {
+        padding: 20px;
+        width: auto;
+    }
+
+    .character-header {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .character-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .character-info-item {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .character-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .character-text {
+        display: block;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .social-links h2 {
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icon {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+}
+
+/* Pour les écrans de taille égale ou inférieure à 480px (téléphones) */
+@media (max-width: 480px) {
+    .character-header {
+        font-size: 1.25rem;
+    }
+
+    .character-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .character-text {
+        font-size: 0.9rem;
+    }
+
+    .social-links h2 {
+        font-size: 1rem;
+    }
+
+    .social-icon {
+        font-size: 1rem;
+    }
+}
+
+/* Pour les grands écrans de taille égale ou supérieure à 1200px */
+@media (min-width: 1200px) {
+    .character-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .character-info-item {
+        margin-bottom: 20px;
+    }
+}
+
+
+section.passions {
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+section.parcours-professionnel {
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+section.loisirs {
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+section.portfolio {
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Optionnel: ajout d'un effet au survol */
+section:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+/* Animation pour les sections */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.section-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.section-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.titre {
+    text-align: center;
+}
+
+.containerAbout {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+.logo img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.character-container {
+    padding: 20px;
+}
+
+.character-header {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.character-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.character-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.character-icon {
+    margin-right: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+/* Animation pour les compétences */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Appliquer les animations aux compétences */
+.competence:nth-child(odd) {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.competence:nth-child(even) {
+    animation: slideInRight 1s ease-out forwards;
+}
+
